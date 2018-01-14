@@ -680,6 +680,12 @@ text-align: left;
   font-size: 18px;
   cursor: pointer;
   margin: 0 37px 0 0;
+  transition: 200ms;
+}
+
+.footer .footer__section-left .footer__subsection--nav .nav-link:hover {
+  transition: 200ms;
+  color: #d52b1e;
 }
 
 .footer .footer__section-left .footer__subsection--copyright {
