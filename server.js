@@ -1,26 +1,6 @@
-// const express = require('express')
-// const path = require('path')
-// const PORT = process.env.PORT || 5000
-
-// express()
-//   .use(express.static(path.join(__dirname, 'public')))
-//   .set('views', path.join(__dirname, 'views'))
-//   .set('view engine', 'ejs')
-//   .get('/', (req, res) => res.render('pages/index'))
-//   .listen(PORT, () => console.log(`Listening on ${ PORT }`))
-
-
-
-
-
-
-
-
-
-
   var express = require("express"); // Require express
   var app = express();
-  var port = process.env.PORT || 5000; // Set the port
+  var port = process.env.PORT || 3000; // Set the port
   
   
   app.use("/", express.static(__dirname + "/public")); // This will serve the public docs
