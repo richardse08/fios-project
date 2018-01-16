@@ -139,6 +139,7 @@
     font-family: 'Custom DS 55Rg';
     font-size: 18px;
     margin: 41px 0 0 3px;
+    letter-spacing: 0.4px;
   }
   
   .header .header__icon .logo-subtext {
@@ -487,6 +488,13 @@
     border-radius: 28px;
     text-align: center;
     padding-top: 13px;
+    transition: 300ms;
+    box-shadow: 0px 0px 0px 0px #212121;
+  }
+
+  .page-index .hero .hero__wrapper .hero__wrapper__sub-wrapper .start-shopping:hover {
+    transition: 300ms;
+    box-shadow: 0px 0px 100px 0px white;
   }
   
   
