@@ -511,7 +511,8 @@
   font-family: 'Custom DS 75Bd';
   /*    margin: 84px 0 0 0;*/
     max-width: 1280px;
-    margin: auto;
+    /* margin: auto; */
+    margin: 0 0 85px 0;
   }
   
   .page-index .fios .fios__header {
@@ -621,7 +622,8 @@
     background-color: black;
     height: 113px;
     color: white;
-    margin: 387px 0 0 0;
+    /* margin: 387px 0 0 0; */
+    margin: 0 0 0 0;
   }
   
   .sales-banner-bottom .sales-banner-bottom__wrapper {
@@ -1439,7 +1441,7 @@
     padding: 90px 0 0 0;
     margin: 0 0 0 170px;
     max-width: 1280px;
-    margin: auto;
+    margin: 0 0 388px 0;
   }
   
   .page-why-fios .awards .text-wrapper {
@@ -1997,13 +1999,140 @@
   position: relative;
   left: 0;
   transition: left ease 0.25s;
-  /* margin: 18px 0 0 13px; */
-
   margin: 18px 0 0 0;
   padding: 0 0 0 13px;
 }
 
 
+
+
+.page-support .more-support .more-support__wrapper {
+  padding: 102px 0 0 0;
+  max-width: 1280px;
+  height: 269px;
+  margin: auto;
+}
+
+.page-support .more-support .more-support__wrapper .more-support__sub-wrapper {
+  margin: 0 0 0 170px;
+}
+
+.page-support .more-support .text-wrapper {
+  color: black;
+  font-family: 'Custom DS 75Bd';
+  font-size: 36px;
+  line-height: 34px;
+  width: 335px;
+}
+
+
+
+/* divider after support *************************************************/
+.page-support .divider {
+  border-bottom: solid;
+  border-width: 0.5px;
+  border-color: #D8DADA;
+  width: 100%;
+}
+
+.page-support .more-support .support__wrapper {
+  padding: 6px 0 0 0;
+}
+
+.page-support .more-support .support__wrapper .block {
+  height: 100px;
+  width: 300px;
+  float: left;
+  margin: 36px 22px 0 0;
+}
+
+.page-support .more-support .support__wrapper .left__block--img {
+  float: left;
+  margin: 0 19px 0 0;
+}
+
+.page-support .more-support .support__wrapper .center__block--img {
+  float: left;
+  margin: 0 18px 0 5px;
+}
+
+.page-support .more-support .support__wrapper .right__block--img {
+  float: left;
+  margin: 0 18px 0 3px;
+}
+
+.page-support .more-support .support__wrapper .header-text {
+  color: #000000;
+  font-family: 'Custom DS 75Bd';
+  font-size: 18px;
+  line-height: 17px;
+  margin: 1px 0 0 0;
+}
+
+.page-support .more-support .support__wrapper .body-text {
+  color: #333333;
+    font-family: 'Custom TX 55Rg';
+    font-size: 14px;
+    line-height: 17px;
+    /* width: 230px; */
+    margin: 2px 0 0 0;
+}
+
+.page-support .more-support .support__wrapper .left__block--link {
+  color: #000000;
+  font-family: 'Custom DS 75Bd';
+  font-size: 18px;
+  line-height: 17px;
+  margin: 19px 0 0 0;
+}
+
+.page-support .more-support .support__wrapper .center__block--link {
+  color: #000000;
+  font-family: 'Custom DS 75Bd';
+  font-size: 16px;
+  line-height: 15px;
+  margin: 19px 0 0 0;
+}
+
+.page-support .more-support .support__wrapper .right__block--link {
+  color: #000000;
+  font-family: 'Custom DS 75Bd';
+  font-size: 16px;
+  line-height: 15px;
+  margin: 19px 0 0 0;
+}
+
+.page-support .more-support .support__wrapper .wireless-link__wrapper:hover .support-arrow {
+  left: 6.5px;
+}
+
+.page-support .more-support .support__wrapper .status-link__wrapper:hover .support-arrow {
+  left: 6.5px;
+}
+
+.page-support .more-support .support__wrapper .support-arrow__wrapper {
+  width: 65px;
+}
+
+.page-support .more-support .support__wrapper .support-arrow__wrapper .support-arrow {
+  position: relative;
+  left: 0;
+  transition: left ease 0.25s;
+  margin: 18px 0 0 0;
+  padding: 0 0 0 13px;
+}
+
+.page-support .more-support .support__wrapper .left{
+  width: 173px;
+}
+
+.page-support .more-support .support__wrapper .center{
+  width: 230px;
+}
+
+.page-support .more-support .support__wrapper .right{
+  width: 230px;
+}
 
 
   
