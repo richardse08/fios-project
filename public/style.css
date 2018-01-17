@@ -1913,38 +1913,6 @@
   
   
   
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
   .page-shop-fios .hero {
     height: 643px;
     background-image: url(/assets/assets-shop-fios/hero.png);
@@ -1954,11 +1922,74 @@
     margin: 59px 0 0 0;
     padding-top: 0px;
   }
-  
-  
-  
-  
-  
+
+
+
+
+
+
+
+
+
+/* support *******************************/
+.page-support .hero {
+  background-image: url(/assets/assets-support/hero.png);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  height: 663px;
+  margin: 0 0 auto 0;
+}
+
+.page-support .hero .hero-wrapper {
+  padding: 90px 0 0 0;
+  max-width: 1280px;
+  margin: auto;
+}
+
+.page-support .hero .hero-wrapper .hero-wrapper__sub-wrapper {
+  margin: 0 0 0 170px;
+}
+
+.page-support .hero .hero-wrapper .hero-wrapper__sub-wrapper .hero-text-large {
+  color: black;
+  font-family: 'Custom DS 75Bd';
+  font-size: 48px;
+  line-height: 45px;
+  width: 330px;
+}
+
+.page-support .hero .hero-wrapper .hero-wrapper__sub-wrapper .hero-text-medium {
+  color: #333333;
+  font-family: 'Custom DS 55Rg';
+  font-size: 20px;
+  line-height: 24px;
+  width: 426px;
+  margin: 21px 0 41px 0;
+}
+
+.page-support .hero .hero-wrapper .hero-wrapper__sub-wrapper .helpful__wrapper {
+  border-top: solid;
+  border-width: 0.5px;
+  border-color: black;
+  width: 259px;
+  height: 50px;
+  margin: 0 0 3.5px 0;
+}
+
+.page-support .hero .hero-wrapper .hero-wrapper__sub-wrapper .helpful__link {
+  color: black;
+  font-family: 'Custom DS 75Bd';
+  font-size: 18px;
+  line-height: 17px;
+  margin: 18px 0 0 0;
+}
+
+.page-support .hero .hero-wrapper .hero-wrapper__sub-wrapper .helpful__link--arrow {
+  margin: 18px 0 0 13px;
+}
+
+
   
   
   
