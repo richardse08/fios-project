@@ -1977,6 +1977,10 @@
   margin: 0 0 3.5px 0;
 }
 
+.page-support .hero .hero-wrapper .hero-wrapper__sub-wrapper .helpful__wrapper:hover .helpful__link--arrow {
+  left: 6.5px;
+}
+
 .page-support .hero .hero-wrapper .hero-wrapper__sub-wrapper .helpful__link {
   color: black;
   font-family: 'Custom DS 75Bd';
@@ -1985,9 +1989,21 @@
   margin: 18px 0 0 0;
 }
 
-.page-support .hero .hero-wrapper .hero-wrapper__sub-wrapper .helpful__link--arrow {
-  margin: 18px 0 0 13px;
+.page-support .hero .hero-wrapper .hero-wrapper__sub-wrapper .arrow__block {
+  width: 65px;
 }
+
+.page-support .hero .hero-wrapper .hero-wrapper__sub-wrapper .helpful__link--arrow {
+  position: relative;
+  left: 0;
+  transition: left ease 0.25s;
+  /* margin: 18px 0 0 13px; */
+
+  margin: 18px 0 0 0;
+  padding: 0 0 0 13px;
+}
+
+
 
 
   
