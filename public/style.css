@@ -720,7 +720,7 @@
   /* footer section-right */
   .footer .footer__section-right {
     float: right;
-    margin: 0 170px 0 0;
+    margin: 0 155px 0 0;
   }
   
   .footer .footer__section-right .share {
@@ -1478,7 +1478,7 @@
     font-size: 24px;
     line-height: 22.8px;
     width: 280px;
-    margin: 20px 0 0 0;
+    margin: 16px 0 0 0;
   }
   
   .page-why-fios .awards .awards-block .awards-block__subsection-left .text-small {
@@ -1511,7 +1511,7 @@
     font-size: 24px;
     line-height: 23.8px;
     width: 280px;
-    margin: 27px 0 0 40px;
+    margin: 24px 0 0 40px;
   
   }
   
@@ -1537,7 +1537,7 @@
     font-size: 24px;
     line-height: 23.8px;
     width: 280px;
-    margin: 19px 0 0 40px;
+    margin: 16px 0 0 40px;
   }
   
   .page-why-fios .awards .awards-block .awards-block__subsection-right .text-small {
