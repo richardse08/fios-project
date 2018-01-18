@@ -170,9 +170,11 @@ $(document).ready(function(){
         
         var holder = [];
 
-        for(i=22; i < splitURL.length; i++) {
+        for(i = splitURL.length-1; i > 9; i--) {
             holder.push(splitURL[i]);
         }
+
+        holder.reverse();
         
         userURL = holder.join("");
         console.log(userURL);
