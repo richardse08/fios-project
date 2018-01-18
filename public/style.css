@@ -507,18 +507,29 @@
   
   /* fios wrapper ***************************************/
   .page-index .fios {
-  text-align: center;
+  /* text-align: center; */
   font-family: 'Custom DS 75Bd';
   /*    margin: 84px 0 0 0;*/
-    max-width: 1280px;
+    /* max-width: 1280px; */
     /* margin: auto; */
     margin: 0 0 85px 0;
   }
+
+  .page-index .fios__wrapper {
+    padding: 0 0 0 0;
+    max-width: 1280px;
+    margin: auto;
+  }
+
+  .page-index .fios__wrapper .fios__subwrapper {
+    margin: 0 0 0 170px;
+  }
   
   .page-index .fios .fios__header {
-  font-size: 48px;
-  text-align: left;
-    margin: 80px 0 0 171px;
+    font-size: 48px;
+    text-align: left;
+    /* margin: 80px 0 0 171px; */
+    margin: 80px 0 0 0;
   }
   
   .page-index .fios .fios__block {
@@ -528,7 +539,7 @@
   /* postion the 3 children of block */
   .page-index .fios .fios__block .fios__section-left, .fios__section-middle, .fios__section-right {
     float: left;
-    margin: 13px 0 0 10px;
+    margin: 13px 0 0 0;
     height: 210px;
     width: 309px;
   }
