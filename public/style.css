@@ -74,6 +74,7 @@
     position: fixed;
     width: 100%;
     top: 0;
+    z-index: 100;
   }
   
   .sticky__margin-modifier {
@@ -764,12 +765,7 @@
   /* start second page *****************************************/
   .page-why-fios {
     min-width: 1150px;
-  }
-  
-  .page-why-fios .wrapper {
-  /*    max-width: 1280px;*/
-    border-color: red;
-  /*    height: 200px;*/
+    z-index: 1;
   }
   
   
@@ -782,8 +778,6 @@
   
   /* header *****************************************************/
   .page-why-fios .header {
-    /* adjust the header height for why-fios */
-  /*    height: 86px;*/
     max-width: 1280px;
     margin: auto;
   }
@@ -863,17 +857,18 @@
   /* sticky nav ****************************************/
   .page-why-fios .sticky-nav__wrapper {
     box-shadow: 0px 0px 1px 0px #212121;
+    background-color: white;
   }
   
   .page-why-fios .sticky-nav__subwrapper {
-    max-width: 1280px;
     margin: auto;
+    width: 1280px;
   }
 
   .page-why-fios .sticky-nav {
+    margin: 0 0 0 170px;
     height: 64px;
-    z-index: 1;
-    margin: auto;
+    z-index: 10;
   }
   
   .page-why-fios .sticky-nav .sticky-nav__link-wrapper {
@@ -881,10 +876,10 @@
     color: black;
     font-family: 'Custom DS 75Bd';
     font-size: 16px;
-    margin: 23px 0 0 170px;
+    margin: 23px 0 0 0;
   }
   
-  .page-why-fios .sticky-nav .sticky-nav__link-wrapper .link {
+  .page-why-fios .sticky-nav .sticky-nav__link-wrapper .sticky__link {
     float: left;
     margin: 0 36px 0 0;
     border-bottom: solid;
@@ -893,7 +888,7 @@
     cursor: pointer;
   }
   
-  .page-why-fios .sticky-nav .sticky-nav__link-wrapper .link:hover {
+  .page-why-fios .sticky-nav .sticky-nav__link-wrapper .sticky__link:hover {
     border-bottom-color: #d52b1e;
     transition: 200ms;
   }
@@ -908,8 +903,8 @@
     height: 31px;
     width: 179px;
     padding-top: 13px;
-    float: right;
-    margin: 10px 156px 0 0;
+    float: left;
+    margin: 10px 0 0 138px;
     transition: 200ms;
     box-shadow: 0px 0px 0px 0px #212121;
   }
@@ -919,6 +914,8 @@
     box-shadow: 0px 0px 100px 0px #212121;
   }
   
+
+
   
   
   
@@ -1359,11 +1356,11 @@
   /* hero-six ***************************************************************/
   .page-why-fios .hero-six {
     background-image: url(/assets/assets-why-fios/hero-six.png);
-    background-position: center;
+    /* background-position: center; */
     background-size: cover;
     position: relative;
     height: 625px;
-    margin: 0px 0px 0 15px;
+    margin: 0 0 0 0;
   }
   
   .page-why-fios .hero-six .hero-wrapper {
@@ -1374,7 +1371,7 @@
   }
   
   .page-why-fios .hero-six .hero-wrapper .hero-wrapper__sub-wrapper {
-    margin: 13px 0 0 235px;
+    margin: 13px 0 0 250px;
   }
   
   .page-why-fios .hero-six .hero-wrapper .hero-wrapper__sub-wrapper .hero-text-large {
@@ -1396,7 +1393,7 @@
     border-width: 2px;
     border-bottom-color: black;
     width: 461px;
-    margin: 34px 0 0 399px;
+    margin: 34px 0 0 400px;
   }
   
   .page-why-fios .hero-six .hero-wrapper .hero-wrapper__sub-wrapper .hero-text-small {
@@ -1434,11 +1431,11 @@
   /* hero-seven **************************************************************/
   .page-why-fios .hero-seven {
     background-image: url(/assets/assets-why-fios/hero-seven.png);
-    background-position: center;
+    /* background-position: center; */
     background-size: cover;
     position: relative;
     height: 348px;
-    margin: 0px 0px 0 15px;
+    margin: 0 0 0 0;
   }
   
   

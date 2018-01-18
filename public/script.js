@@ -159,34 +159,70 @@ $(document).ready(function(){
 
 
 
-    // // If user scrolls, fire scroll function
-    // window.onscroll = function() {
-    //     sticky_nav_scroll();
-    // };
+    // If user scrolls, fire scroll function
+    window.onscroll = function() {
+        sticky_nav_scroll();
+    };
 
-    // // Get sticky-nav
-    // var js_nav = document.getElementById("js-nav");
+    // Get sticky-nav
+    var js_nav = document.getElementById("js-nav");
 
-    // // Get class for hero-two so we can add upper margin
-    // var hero_two = document.getElementById("margin-pre-mod");
+    // Get class for hero-two so we can add upper margin
+    var hero_two = document.getElementById("margin-pre-mod");
 
-    // // Get the offset position of the sticky-nav
-    // var sticky = js_nav.offsetTop;
+    // Get the offset position of the sticky-nav
+    var sticky = js_nav.offsetTop;
 
-    // // Add/remove sticky class
-    // function sticky_nav_scroll() {  
+    // Add/remove sticky class
+    function sticky_nav_scroll() {  
         
-    //     if (window.pageYOffset >= sticky) {
-    //         js_nav.classList.add("sticky")
-    //         hero_two.classList.add("sticky__margin-modifier");
-    //     } 
+        if (window.pageYOffset >= sticky) {
+            js_nav.classList.add("sticky")
+            hero_two.classList.add("sticky__margin-modifier");
+        } 
         
-    //     else {
-    //         js_nav.classList.remove("sticky");
-    //         hero_two.classList.remove("sticky__margin-modifier");
-    //     }
+        else {
+            js_nav.classList.remove("sticky");
+            hero_two.classList.remove("sticky__margin-modifier");
+        }
         
-    // }
+    }
+
+
+
+    // scroll fxn
+    function scroller(degree) {
+        $('html, body').animate({
+            // Scroll to degree, taking into account 64 pixels of the sticky nav
+            scrollTop: degree-64
+        }, 'slow');
+    };
+
+
+
+    // sticky-nav scrolls
+    $('.sticky__link').on('click', function() {
+        
+        if(this.id == 'internetScroll') {
+            scroller(657);
+        }
+        if(this.id == 'tvScroll') {
+            scroller(1236);
+        }
+        if(this.id == 'fiosVsCableScroll') {
+            scroller(1995);
+        }
+        if(this.id == 'gamingScroll') {
+            scroller(2664);
+        }
+        if(this.id == 'fiosMobileScroll') {
+            scroller(3266);
+        }
+        if(this.id == 'awardsScroll') {
+            scroller(4239);
+        }
+
+    });
 
 
 
