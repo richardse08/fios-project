@@ -167,11 +167,19 @@ $(document).ready(function(){
     function definePage() {
         var fullURL = window.location.href;
         var splitURL = fullURL.split("");
+        console.log(splitURL[7]);
         
         var holder = [];
 
-        for(i = splitURL.length-1; i > 9; i--) {
-            holder.push(splitURL[i]);
+        if (splitURL[7] == 'l') {
+            for(i = splitURL.length-1; i > 21 ; i--) {
+                holder.push(splitURL[i]);
+            }
+        }
+        if (splitURL[7] == 'f') {
+            for(i = splitURL.length-1; i > 25 ; i--) {
+                holder.push(splitURL[i]);
+            }
         }
 
         holder.reverse();
