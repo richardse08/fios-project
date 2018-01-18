@@ -175,7 +175,7 @@ $(document).ready(function(){
         }
         
         userURL = holder.join("");
-        // return concatURL;
+        console.log(userURL);
     }
 
     // Fire definePage to determine if user is on a page that needs scrolling nav
