@@ -5,7 +5,7 @@ $(document).ready(function(){
 
 
 
-    
+
 
 
     // Create cards object
@@ -159,38 +159,73 @@ $(document).ready(function(){
 
 
 
-    // If user scrolls, fire scroll function
-    window.onscroll = function() {
-        sticky_nav_scroll();
-    };
-
-    // Get sticky-nav
-    var js_nav = document.getElementById("js-nav");
-
-    // Get class for hero-two so we can add upper margin
-    var hero_two = document.getElementById("margin-pre-mod");
-
-    // Get the offset position of the sticky-nav
-    var sticky = js_nav.offsetTop;
-
-    // Add/remove sticky class
-    function sticky_nav_scroll() {  
+    // Var to hold page user is on when page is reloaded or switched
+    var userURL;
+    var whyFiosURL = 'why-fios';
+    
+    // What page is user on
+    function definePage() {
+        var fullURL = window.location.href;
+        var splitURL = fullURL.split("");
         
-        if (window.pageYOffset >= sticky) {
-            js_nav.classList.add("sticky")
-            hero_two.classList.add("sticky__margin-modifier");
-        } 
-        
-        else {
-            js_nav.classList.remove("sticky");
-            hero_two.classList.remove("sticky__margin-modifier");
+        var holder = [];
+
+        for(i=22; i < splitURL.length; i++) {
+            holder.push(splitURL[i]);
         }
         
+        userURL = holder.join("");
+        // return concatURL;
     }
 
+    // Fire definePage to determine if user is on a page that needs scrolling nav
+    definePage();
 
 
-    // scroll fxn
+
+
+
+
+
+
+
+    // If user scrolls, fire scroll function
+    if (userURL == whyFiosURL) {
+
+        window.onscroll = function() {
+            sticky_nav_scroll();
+        };
+        
+
+        // Get sticky-nav
+        var js_nav = document.getElementById("js-nav");
+
+        // Get class for hero-two so we can add upper margin
+        var hero_two = document.getElementById("margin-pre-mod");
+
+        // Get the offset position of the sticky-nav
+        var sticky = js_nav.offsetTop;
+
+        // Add/remove sticky class
+        function sticky_nav_scroll() {  
+            
+            if (window.pageYOffset >= sticky) {
+                js_nav.classList.add("sticky")
+                hero_two.classList.add("sticky__margin-modifier");
+            } 
+            
+            else {
+                js_nav.classList.remove("sticky");
+                hero_two.classList.remove("sticky__margin-modifier");
+            }
+            
+        } // end sticky_nav_scroll
+
+    };
+
+
+
+    // Let user quickly navigate to different sections of why-fios page
     function scroller(degree) {
         $('html, body').animate({
             // Scroll to degree, taking into account 64 pixels of the sticky nav
@@ -198,9 +233,7 @@ $(document).ready(function(){
         }, 'slow');
     };
 
-
-
-    // sticky-nav scrolls
+    // Set distances for sections of why-fios for fast scrolling
     $('.sticky__link').on('click', function() {
         
         if(this.id == 'internetScroll') {
