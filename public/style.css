@@ -861,9 +861,17 @@
   
   
   /* sticky nav ****************************************/
+  .page-why-fios .sticky-nav__wrapper {
+    box-shadow: 0px 0px 1px 0px #212121;
+  }
+  
+  .page-why-fios .sticky-nav__subwrapper {
+    max-width: 1280px;
+    margin: auto;
+  }
+
   .page-why-fios .sticky-nav {
     height: 64px;
-    box-shadow: 0px 0px 1px 0px #212121;
     z-index: 1;
     margin: auto;
   }
@@ -1150,6 +1158,15 @@
     height: 665px;
     margin-bottom: auto;
   }
+
+  .page-why-fios .hero-four .hero-four__wrapper {
+    max-width: 1280px;
+    margin: auto;
+  }
+
+  .page-why-fios .hero-four .hero-four__subwrapper {
+    margin: 0 0 0 170px;
+  }
   
   .page-why-fios .hero-four .hero-wrapper-left .hero-text-large {
     color: black;
@@ -1158,16 +1175,7 @@
     width: 330px;
     height: 150px;
     line-height: 45.6px;
-    margin: 108px 0 0 170px;
-  }
-  
-  .page-why-fios .hero.four .hero-wrapper-left .divider-four {
-    border-color: pink; !important;
-    border: solid;
-    border-width: thin;
-    width: 379px;
-    height: 50px;
-    margin: 298px 0 0 170px;
+    margin: 108px 0 0 0;
   }
   
   .page-why-fios .hero-four .hero-wrapper-left .hero-text-medium {
@@ -1176,7 +1184,7 @@
     font-size: 24px;
     line-height: 22.8px;
     width: 426px;
-    margin: 298px 0 0 170px;
+    margin: 298px 0 0 0;
   }
   
   .page-why-fios .hero-four .hero-wrapper-left .hero-text-small {
@@ -1186,7 +1194,7 @@
     text-align: left;
     line-height: 24px;
     width: 380px;
-    margin: 19px 0 0 170px;
+    margin: 19px 0 0 0;
   }
   
   .page-why-fios .hero-four .hero-wrapper-right {
@@ -1194,7 +1202,7 @@
     color: black;
     font-family: 'Custom DS 75Bd';
     font-size: 18px;
-    margin: 104.5px 177px 0 0px;
+    margin: 106px 0px 0 134px;
   }
   
   .page-why-fios .hero-four .hero-wrapper-right .ranks-fios {
@@ -1221,7 +1229,7 @@
   .page-why-fios .hero-four .hero-wrapper-right .ranks-general {
     background-color: #D8DADA;
     color: black;
-    font-family: 'Custom DS 55Rg';
+    font-family: 'Custom TX 55Rg';
     font-size: 14px;
     height: 48px;
     margin: 12px 0 0 0;
@@ -1301,18 +1309,17 @@
     background-size: cover;
     position: relative;
     height: 602px;
-    margin: 4px 0px 0 15px;
+    margin: 4px 0px 0 0;
   }
   
   .page-why-fios .hero-five .hero-wrapper {
     padding: 90px 0 0 0;
-    margin: 0 0 0 170px;
     max-width: 1280px;
     margin: auto;
   }
   
   .page-why-fios .hero-five .hero-wrapper .hero-wrapper__sub-wrapper {
-    margin: 12px 0 0 155px;
+    margin: 12px 0 0 170px;
   }
   
   .page-why-fios .hero-five .hero-wrapper .hero-wrapper__sub-wrapper .hero-text-large {
@@ -1444,33 +1451,39 @@
   
   /* awards *****************************************************************/
   .page-why-fios .awards {
-    padding: 90px 0 0 0;
-    margin: 0 0 0 170px;
-    max-width: 1280px;
     margin: 0 0 388px 0;
   }
+
+  .page-why-fios .awards .awards__wrapper {
+    padding: 90px 0 0 0;
+    max-width: 1280px;
+    margin: auto;
+  }
+
+  .page-why-fios .awards .awards__wrapper .awards__subwrapper {
+    margin: 0 0 0 170px;
+  }
   
-  .page-why-fios .awards .text-wrapper {
+  .page-why-fios .awards .awards__wrapper .awards__subwrapper .text-wrapper {
     color: black;
     font-family: 'Custom DS 75Bd';
     font-size: 48px;
     line-height: 46px;
-    margin: 0 0 0 170px;
+    letter-spacing: 0.2px;
   }
   
-  .page-why-fios .awards .text-wrapper .text-large__top {
+  .page-why-fios .awards .awards__wrapper .awards__subwrapper .text-wrapper .text-large__top {
     width: 375px;
   }
   
-  .page-why-fios .awards .text-wrapper .text-large__bottom {
+  .page-why-fios .awards .awards__wrapper .awards__subwrapper .text-wrapper .text-large__bottom {
     width: 850px;
   }
   
   
   
   /* awards-block */
-  .page-why-fios .awards .awards-block {
-    margin: 0 0 0 170px;
+  .page-why-fios .awards .awards__wrapper .awards__subwrapper .awards-block {
   }
   
   
@@ -1491,8 +1504,9 @@
   
   .page-why-fios .awards .awards-block .awards-block__subsection-left .text-small {
     color: #747676;
-    font-family: 'Arial';
-    font-size: 13px;
+    font-family: Arial,sans-serif;
+    font-size: 12px;
+    font-weight: 400;
     line-height: 14.4px;
     width: 280px;
     margin: 19px 0 0 0;
@@ -1525,8 +1539,9 @@
   
   .page-why-fios .awards .awards-block .awards-block__subsection-middle .text-small {
     color: #747676;
-    font-family: 'Arial';
-    font-size: 13px;
+    font-family: Arial,sans-serif;
+    font-size: 12px;
+    font-weight: 400;
     line-height: 14.4px;
     width: 280px;
     margin: 19px 0 0 40px;
@@ -1550,8 +1565,9 @@
   
   .page-why-fios .awards .awards-block .awards-block__subsection-right .text-small {
     color: #747676;
-    font-family: 'Arial';
-    font-size: 13px;
+    font-family: Arial,sans-serif;
+    font-size: 12px;
+    font-weight: 400;
     line-height: 14.4px;
     width: 285px;
     margin: 19px 0 0 40px;
