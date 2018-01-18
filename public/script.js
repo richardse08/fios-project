@@ -177,7 +177,7 @@ $(document).ready(function(){
             }
         }
         if (splitURL[7] == 'f') {
-            for(i = splitURL.length-1; i > 25 ; i--) {
+            for(i = splitURL.length-1; i > 33 ; i--) {
                 holder.push(splitURL[i]);
             }
         }
