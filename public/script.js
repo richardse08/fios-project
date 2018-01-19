@@ -176,7 +176,6 @@ $(document).ready(function(){
         holder.reverse();
         
         userURL = holder.join("");
-        console.log(userURL);
     }
 
     // Fire definePage to determine if user is on a page that needs scrolling nav
@@ -263,6 +262,13 @@ $(document).ready(function(){
 
 
 
+
+
+
+    // Set state of cardsNav selectors
+    var most_popular = false;
+    var internet_only = false;
+    var bundles = false;
 
 
 
@@ -357,19 +363,6 @@ $(document).ready(function(){
         documentPrep();
 
     } // documentClear
-
-
-
-
-
-
-
-
-
-    // Set state of cardsNav selectors
-    var most_popular = false;
-    var internet_only = false;
-    var bundles = false;
 
 
 
@@ -552,12 +545,12 @@ $(document).ready(function(){
 
 
 
-    // // Init slick
-    // $('.cards__endpoint__wrapper').slick({
-    //     infinite: false,
-    //     slidesToShow: 3,
-    //     slidesToScroll: 1
-    // });
+    // Init slick
+    $('.cards__endpoint__wrapper').slick({
+        infinite: false,
+        slidesToShow: 3,
+        slidesToScroll: 1
+    });
 
 
 
