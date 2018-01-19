@@ -166,20 +166,11 @@ $(document).ready(function(){
     // What page is user on
     function definePage() {
         var fullURL = window.location.href;
-        var splitURL = fullURL.split("");
-        console.log(splitURL[7]);
-        
+        var splitURL = fullURL.split("");        
         var holder = [];
 
-        if (splitURL[7] == 'l') {
-            for(i = splitURL.length-1; i > 21 ; i--) {
-                holder.push(splitURL[i]);
-            }
-        }
-        if (splitURL[7] == 'f') {
-            for(i = splitURL.length-1; i > 33 ; i--) {
-                holder.push(splitURL[i]);
-            }
+        for(i = splitURL.length-1; i > splitURL.length-9; i--) {
+            holder.push(splitURL[i]);
         }
 
         holder.reverse();
