@@ -2355,7 +2355,6 @@
   height: 482px;
   background-color: white;
   box-shadow: 0px 0px 1px 0px #212121;
-  padding: 0 0 0 0;
 }
 
 .my-verizon .exit {
@@ -2384,59 +2383,80 @@
 
 
 
-/* block__top */
-.my-verizon .block__top {
-  width: 600px;
-  height: 100px;
+/* block */
+.my-verizon .block {
 }
 
-/* block__top--left */
-.my-verizon .block__top--left {
+
+
+/* block__left */
+.my-verizon .block__left {
+  width: 340px;
+  height: 100px;
+  margin: 41px 0 0 0;
+}
+
+.my-verizon .block__left--top {
   border-top: solid;
   border-width: 0.5px;
   width: 280px;
-  margin: 41px 0 0 60px;
+  margin: 0 0 0 60px;
 }
 
-.my-verizon .block__top--left .text-large {
+.my-verizon .block__left--bottom {
+  border-top: solid;
+  border-width: 0.5px;
+  width: 280px;
+  margin: 50px 0 0 60px;
+}
+
+
+
+/* block__right */
+.my-verizon .block__right {
+  width: 340px;
+  height: 100px;
+  margin: 41px 0 0 0;
+}
+
+.my-verizon .block__right--top {
+  border-top: solid;
+  border-width: 0.5px;
+  width: 280px;
+  margin: 0 0 0 20px;
+}
+
+.my-verizon .block__right--bottom {
+  border-top: solid;
+  border-width: 0.5px;
+  width: 280px;
+  margin: 50px 0 0 20px;
+}
+
+
+
+/* text classes apply to ALL sub elements of block */
+.my-verizon .block .text-large {
   color: black;
   font-family: 'Custom DS 75Bd';
   font-size: 18px;
   line-height: 17.1px;
-  /* width: 290px; */
-  /* height: 40px; */
   margin: 18px 0 0 0;
   padding: 0 0 0 0;
 }
 
-/* .my-verizon .block__top--left .arrow__block {
-  margin: -17px 0 0 219px;
-} */
-
-.my-verizon .block__top--left .text-medium {
+.my-verizon .block .text-medium {
   color: #747676;
     font-family: Arial,sans-serif;
     font-size: 12px;
     line-height: 1px;
-    margin: 0px 0 0 0;
+    margin: 0 0 0 0;
     padding: 0 0 0 0;
 }
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* arrow animations */
 .my-verizon .my-verizon__wrapper {
   border-width: 0.5px;
   border-color: black;

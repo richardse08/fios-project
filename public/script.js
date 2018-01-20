@@ -562,3 +562,38 @@ $(document).ready(function(){
 
 
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+// function tempUp(degrees, direction) {
+    
+//     // Press the temp up button once
+//     p.ChangeDutyCycle(10.5)
+//     time.sleep(.2)
+//     p.ChangeDutyCycle(7.5)
+//     time.sleep(1)
+
+// }
+
+
+// function tempDown(degrees, direction) {
+    
+//     // Press the temp down button once
+//     p.ChangeDutyCycle(10.5)
+//     time.sleep(.2)
+//     p.ChangeDutyCycle(7.5)
+//     time.sleep(1)
+
+// }
+
+
