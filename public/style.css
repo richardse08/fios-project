@@ -108,7 +108,26 @@
     background-color: rgba(10,10,10,.45);
     overflow-y: scroll;
   }
-  
+
+
+
+  /* global arrow animations */
+  .global__arrow__wrapper:hover .global__arrow {
+    left: 6.5px;
+  }
+
+  .global__arrow__block {
+    width: 100px;
+    float: left;
+  }
+
+  .global__arrow {
+    position: relative;
+    left: 0;
+    transition: left ease 0.25s;
+  }
+
+
   
   
   
@@ -342,15 +361,9 @@
     float: left;
     margin: 22px 0 0 0;
     padding: 0 0 0 10px;
-    cursor: pointer;
-    position: relative;
-    left: 0;
-    transition: left ease 0.25s;
   }
   
-  .sales-banner-top .sales-banner-top__savings-icon:hover {
-    left: 5px;
-  }
+
   
   
   
@@ -662,17 +675,11 @@
     font-family: 'Custom TX 65Md';
     font-size: 18px;
     margin: 46px 0 0 0;
+    color: white;
   }
   
   .sales-banner-bottom .sales-banner-bottom__section-right .arrow {
     margin: 4px 148px 0 10px;
-    position: relative;
-    left: 0;
-    transition: left ease 0.25s;
-  }
-  
-  .sales-banner-bottom .sales-banner-bottom__section-right .arrow:hover {
-    left: 5px;
   }
   
   
@@ -686,7 +693,6 @@
   /* footer *********************************************************/
   .footer {
     padding-top: 60px;
-  
     max-width: 1280px;
     margin: auto;
   }

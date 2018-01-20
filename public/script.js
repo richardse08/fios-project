@@ -10,6 +10,7 @@ $(document).ready(function(){
 
     // Add overlay and pop up modal when My Verizon is clicked
     $('#js-my-verizon-modal').on('click', function() {
+        console.log('my verizon modal clicked');
         $('.my-verizon').removeClass('display-none');
         $('.background-overlay').removeClass('display-none');
     });
