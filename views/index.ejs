@@ -25,8 +25,13 @@
 
 
 
-        <div class="my-verizon">
-            <img src="assets/assets-my-verizon/exit.png" class="exit float-right">
+        <div class="background-overlay display-none"></div>
+
+
+
+
+        <div class="my-verizon display-none">
+            <img src="assets/assets-my-verizon/exit.png" class="float-right" id="js-my-verizon-exit">
             <div class="text-large">Welcome back, Verizon customer.</div>
             <div class="text-medium">How can we help you today?</div>
 
@@ -88,7 +93,7 @@
             </div> <!-- /block__left -->
 
 
-        </div>
+        </div> <!-- /my-verizon -->
     
     
     
@@ -144,9 +149,9 @@
                         <div class="nav-link float-left">
                             <a href="/support">Support</a>
                         </div>
-    
-                        <div class="nav-link float-left">
-                            <a href="/my-verizon">My Verizon</a>
+
+                        <div class="nav-link float-left" id="js-my-verizon-modal">
+                            <div>My Verizon</div>
                         </div>
     
     

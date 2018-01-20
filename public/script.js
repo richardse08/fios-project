@@ -8,6 +8,26 @@ $(document).ready(function(){
 
 
 
+    // Add overlay and pop up modal when My Verizon is clicked
+    $('#js-my-verizon-modal').on('click', function() {
+        $('.my-verizon').removeClass('display-none');
+        $('.background-overlay').removeClass('display-none');
+    });
+
+    // Remove overlay and remove pop up modal when exit button is clicked
+    $('#js-my-verizon-exit').on('click', function() {
+        $('.my-verizon').addClass('display-none');
+        $('.background-overlay').addClass('display-none');
+    })
+
+
+
+
+
+
+
+
+
     // Create cards object
     var cards_object = {
         // 1
@@ -565,35 +585,5 @@ $(document).ready(function(){
 
 
 
-
-
-
-
-
-
-
-
-
-
-// function tempUp(degrees, direction) {
-    
-//     // Press the temp up button once
-//     p.ChangeDutyCycle(10.5)
-//     time.sleep(.2)
-//     p.ChangeDutyCycle(7.5)
-//     time.sleep(1)
-
-// }
-
-
-// function tempDown(degrees, direction) {
-    
-//     // Press the temp down button once
-//     p.ChangeDutyCycle(10.5)
-//     time.sleep(.2)
-//     p.ChangeDutyCycle(7.5)
-//     time.sleep(1)
-
-// }
 
 
