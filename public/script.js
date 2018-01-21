@@ -336,9 +336,6 @@ $(document).ready(function(){
 
         }
 
-        // Anytime cardSelection is clicked, fire a function to send card object to injector
-        // formatInjector();
-        // console.log('card injector fired');
     });
 
 
@@ -400,9 +397,6 @@ $(document).ready(function(){
     // Inject js and render on the DOM
     function cardInjector(obj) {
 
-
-        console.log(obj);
-        console.log(obj[0].title);
 
         // Loop through obj
         for (i in obj) {
@@ -496,19 +490,27 @@ $(document).ready(function(){
             // // Close card -- permanent
             // card =+ '</div>';
 
-
+            // This is the old way of doing it which doesnt work with slick
             // $('.cards__endpoint' + i + '').append(card);
 
 
+            // These approaches dont work
             // $('.slick-list').append(card);
             // $('.slick-track').append(card);
 
+            
+            // This doesnt work
             // $('.cards__endpoint__wrapper').slick('slickAdd', card);
 
-            console.log('fack!');
+
+            // This doesnt seem to work either
             // $('.cards__endpoint' + i + '').slick('slickAdd', card);
 
+
+            // This DOES work, if you change the cards htmls as we are doing below
             $('.cards__endpoint__wrapper').slick('slickAdd','<div class="card"></div>');
+            // Take all the stuff that needs to be in a card, EXCLUDING the opening <div class=card> and closing </div> tags
+            // since those will already be fulfilled by the card in html
             $('.card').html(card);
             
 
@@ -525,29 +527,7 @@ $(document).ready(function(){
 
 
 
-    // Format injector and send object to injector
-    function formatInjector() {
-
-        if (most_popular == true) {
-            cardInjector(cards_object[0].card1);
-        }
-        else if (internet_only == true) {
-            cardInjector(cards_object[1].card2);
-        }
-        else if (bundles == true) {
-            cardInjector(cards_object[2].card3);
-        }
-
-    }
-
-
-
-
-
-
-
-
-
+    // testing only
     function testInjector() {
         var testCard = '<div class="card"></div>';
         var testCard2 = '<div class="card slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false" tabindex="0" role="tabpanel" id="slick-slide01" aria-describedby="slick-slide-control01" style="width: 370px;"></div>';
@@ -567,20 +547,18 @@ $(document).ready(function(){
     // Click left cards button
     $('.cardsNav__left').on('click', function() {
 
-        // documentClear();
 
+        // This doesnt work because we need a slideIndex, which we are presently NOT using
+        // slideIndex appears to be utilized in the slick.js file though...?
         // $('.add-remove').slick('slickRemove',slideIndex - 1);
-        
         // if (slideIndex !== 0){
         //     slideIndex--;
         // }
-        
         // $('.cards__endpoint__wrapper').slick('slickRemove','<div class="card"></div>');
         // $('.cards__endpoint__wrapper').html('<div class="slickAdd slickRemove card"></div>');
 
 
         cardInjector([cards_object.card_1, cards_object.card_2, cards_object.card_3]);
-        // testInjector();
 
     });
 
@@ -589,7 +567,6 @@ $(document).ready(function(){
     // Click center cards button
     $('.cardsNav__center').on('click', function() {
         
-        // documentClear();
         cardInjector([cards_object.card_4, cards_object.card_5, cards_object.card_6]);
 
     });
@@ -599,7 +576,6 @@ $(document).ready(function(){
     // Click right cards button
     $('.cardsNav__right').on('click', function() {
 
-        // documentClear();
         cardInjector([cards_object.card_1, cards_object.card_2, cards_object.card_3, cards_object.card_4, cards_object.card_5, cards_object.card_6]);
 
     });
