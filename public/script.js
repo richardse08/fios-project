@@ -397,9 +397,6 @@ $(document).ready(function(){
     // Inject js and render on the DOM
     function cardInjector(obj) {
 
-        // Show card
-        $('.cards__endpoint__wrapper').removeClass('display-none');
-
         // Loop through obj
         for (i in obj) {
 
@@ -515,6 +512,10 @@ $(document).ready(function(){
             $('.cards__endpoint__wrapper').slick('slickAdd','<div class="card"></div>');
 
 
+            // Doesnt work either
+            // $('.cards__endpoint__wrapper').slick('slickAdd', 'obj[0]', 'addBefore: true');
+
+
             // Take all the stuff that needs to be in a card, EXCLUDING the opening <div class=card>
             // and closing </div> tags since those will already be fulfilled by the card in html
             $('.card').html(card);
@@ -584,6 +585,7 @@ $(document).ready(function(){
         infinite: false,
         slidesToShow: 3,
         slidesToScroll: 1
+        // variableWidth: true
     });
 
 
