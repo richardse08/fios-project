@@ -9,14 +9,19 @@ $(document).ready(function(){
 
 
     // Add overlay and pop up modal when My Verizon is clicked
-    $('#js-my-verizon-modal').on('click', function() {
+    $('.js-my-verizon-modal').on('click', function() {
         console.log('my verizon modal clicked');
         $('.my-verizon').removeClass('display-none');
         $('.background-overlay').removeClass('display-none');
+
+        $('html, body').animate({
+            // Scroll to degree, taking into account 64 pixels of the sticky nav
+            scrollTop: 0
+        }, 'slow');
     });
 
     // Remove overlay and remove pop up modal when exit button is clicked
-    $('#js-my-verizon-exit').on('click', function() {
+    $('.js-my-verizon-exit').on('click', function() {
         $('.my-verizon').addClass('display-none');
         $('.background-overlay').addClass('display-none');
     })

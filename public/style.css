@@ -724,6 +724,9 @@
     margin: 0 0 0 0;
   }
   
+
+
+  /* footer nav-links */
   .footer .footer__section-left .footer__subsection--nav {
     margin: 0 0 0 170px;
   }
@@ -2399,7 +2402,7 @@
   z-index: 101;
 }
 
-#js-my-verizon-exit {
+.js-my-verizon-exit {
   margin: 24px 24px 0 0;
   cursor: pointer;
   -webkit-transition: all 200ms ease-in;
@@ -2408,7 +2411,7 @@
   transition: all 200ms ease-in;
 }
 
-#js-my-verizon-exit:hover {
+.js-my-verizon-exit:hover {
   
   -webkit-transition: all 200ms ease-in;
   -webkit-transform: scale(1.5);
