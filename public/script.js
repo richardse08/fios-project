@@ -297,46 +297,7 @@ $(document).ready(function(){
 
 
 
-    // Turn cards in the cardsNav section on and off
-    $('.cardSelection').on('click', function() {
-
-        // If card is inactive, make it active
-        if ($(this).hasClass('cardsNav__inactive')) {
-            
-            if ($(this).hasClass('cardsNav__left')) {
-                most_popular = true;
-            }
-            if ($(this).hasClass('cardsNav__center')) {
-                internet_only = true;
-            }
-            if ($(this).hasClass('cardsNav__right')) {
-                bundles = true;
-            }
-
-            $(this).removeClass('cardsNav__inactive');
-            $(this).addClass('cardsNav__active');
-
-        }
-
-        // If cards is active, make it inactive
-        else if ($(this).hasClass('cardsNav__active')) {
-
-            if ($(this).hasClass('cardsNav__left')) {
-                most_popular = false;
-            }
-            if ($(this).hasClass('cardsNav__center')) {
-                internet_only = false;
-            }
-            if ($(this).hasClass('cardsNav__right')) {
-                bundles = false;
-            }
-
-            $(this).removeClass('cardsNav__active');
-            $(this).addClass('cardsNav__inactive');
-
-        }
-
-    });
+   
 
 
 
@@ -395,14 +356,14 @@ $(document).ready(function(){
 
 
     // Inject js and render on the DOM
-    function cardInjector(obj) {
+    function cardInjector(obj, section) {
 
 
         // Loop through obj
         for (i in obj) {
 
             // init card variable
-            var card = '';
+            var card = '<div class="one_card">';
             // var card = '<div class="card">'; // Open card -- permanent
             // var card = '<div class="card slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false" tabindex="0" role="tabpanel" id="slick-slide01" aria-describedby="slick-slide-control01" style="width: 370px;">';
 
@@ -487,6 +448,9 @@ $(document).ready(function(){
             card += '<div class="contact__orderonline" href="' + obj[i].orderOnlineLink + '">Order online</div>';
             // card += '</div>';
 
+
+            card += '</div>';
+
             // // Close card -- permanent
             // card =+ '</div>';
 
@@ -508,10 +472,12 @@ $(document).ready(function(){
 
 
             // This DOES work, if you change the cards htmls as we are doing below
-            $('.cards__endpoint__wrapper').slick('slickAdd','<div class="card"></div>');
+            // $('.cards__endpoint__wrapper').slick('slickAdd','<div class="card"></div>');
             // Take all the stuff that needs to be in a card, EXCLUDING the opening <div class=card> and closing </div> tags
             // since those will already be fulfilled by the card in html
-            $('.card').html(card);
+            // $('.card').html(card);
+
+            $('.cards__endpoint__wrapper_' + section).append(card);
             
 
         }; // Close loop
@@ -537,49 +503,45 @@ $(document).ready(function(){
 
 
 
+    cardInjector([cards_object.card_1, cards_object.card_2, cards_object.card_3], 'most-popular');
+
+    cardInjector([cards_object.card_4, cards_object.card_5, cards_object.card_6], 'internet');
+
+    cardInjector([cards_object.card_1, cards_object.card_2, cards_object.card_3, cards_object.card_4, cards_object.card_5, cards_object.card_6], 'bundles');
     
 
 
+    $('.cardSelection').click(function() {
 
+        var section = $(this).data('section');
 
+        // Remove all active class (for underlining)
+        $('.cardSelection').removeClass('cardsNav__active');
 
+        // Add active class for just this tab
+        $(this).addClass('cardsNav__active');
 
-    // Click left cards button
-    $('.cardsNav__left').on('click', function() {
+        // Hide all sections first
+        $('.cards__endpoint__wrapper').addClass('display-none');
 
+        // Show just the section that we want
+        $('.cards__endpoint__wrapper_' + section).removeClass('display-none');
 
-        // This doesnt work because we need a slideIndex, which we are presently NOT using
-        // slideIndex appears to be utilized in the slick.js file though...?
-        // $('.add-remove').slick('slickRemove',slideIndex - 1);
-        // if (slideIndex !== 0){
-        //     slideIndex--;
-        // }
-        // $('.cards__endpoint__wrapper').slick('slickRemove','<div class="card"></div>');
-        // $('.cards__endpoint__wrapper').html('<div class="slickAdd slickRemove card"></div>');
+        // Unitialize this slider
+        $('.cards__endpoint__wrapper_' + section).slick('unslick');
 
-
-        cardInjector([cards_object.card_1, cards_object.card_2, cards_object.card_3]);
-
+        // Reinitialize this slider
+        $('.cards__endpoint__wrapper_' + section).slick({
+            arrows: true,
+            dots: true,
+            infinite: false,
+            slidesToShow: 3,
+            slidesToScroll: 1
+        });
     });
 
-
-
-    // Click center cards button
-    $('.cardsNav__center').on('click', function() {
-        
-        cardInjector([cards_object.card_4, cards_object.card_5, cards_object.card_6]);
-
-    });
-
-
-
-    // Click right cards button
-    $('.cardsNav__right').on('click', function() {
-
-        cardInjector([cards_object.card_1, cards_object.card_2, cards_object.card_3, cards_object.card_4, cards_object.card_5, cards_object.card_6]);
-
-    });
-
+  
+     
 
 
 

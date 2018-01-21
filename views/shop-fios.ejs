@@ -230,11 +230,11 @@
 
                     <div class="cardsNav">
 
-                        <div class="cardSelection cardsNav__left cardsNav__inactive">Most popular</div>                
+                        <div class="cardSelection cardsNav__left cardsNav__active" data-section="most-popular">Most popular</div>                
 
-                        <div class="cardSelection cardsNav__center cardsNav__inactive">Internet only</div>
+                        <div class="cardSelection cardsNav__center" data-section="internet">Internet only</div>
 
-                        <div class="cardSelection cardsNav__right cardsNav__inactive">Bundles</div>
+                        <div class="cardSelection cardsNav__right" data-section="bundles">Bundles</div>
 
                     </div>
 
@@ -257,8 +257,13 @@
 
                         <button class="slick-prev slick-arrow" aria-label="Previous" type="button">Previous</button>
 
-                        <div class="cards__endpoint__wrapper">
-                            <div class="slickAdd slickRemove card"></div>
+                        <div class="cards__endpoint__wrapper cards__endpoint__wrapper_most-popular">
+                        </div>
+
+                        <div class="cards__endpoint__wrapper cards__endpoint__wrapper_internet display-none">
+                        </div>
+
+                        <div class="cards__endpoint__wrapper cards__endpoint__wrapper_bundles display-none">
                         </div>
 
                         <button class="slick-next slick-arrow" aria-label="Previous" type="button">Previous</button>

@@ -82,7 +82,7 @@
   }
   
   .display-none {
-    display: none;
+    display: none!important;
   }
   
   /* disable ALL visited links from underlining and changing color */
