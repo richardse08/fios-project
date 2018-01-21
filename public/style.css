@@ -124,7 +124,26 @@
   .global__arrow {
     position: relative;
     left: 0;
+    top: 0;
     transition: left ease 0.25s;
+  }
+
+
+
+  /* global vertical arrow animations */
+  .global__arrow__wrapper--vertical:hover .global__arrow--vertical {
+    top: 6.5px;
+  }
+
+  .global__arrow__block--vertical {
+    width: 100px;
+    float: left;
+  }
+
+  .global__arrow--vertical {
+    position: relative;
+    top: 0;
+    transition: top ease 0.25s;
   }
 
 
