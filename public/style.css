@@ -1622,7 +1622,7 @@
   
   
   
-  /* cardsTitle */
+  /* cards title section */
   .page-shop-fios .cardsTitle__wrapper {
     background-color: #F6F6F6;
     background-position: center;
@@ -1650,7 +1650,7 @@
   
   
   
-  /* cardsNav */
+  /* cards nav section */
   .page-shop-fios .cardsNav__wrapper {
     width: 100%;
     height: 63px;
@@ -1699,20 +1699,30 @@
   
   
   
-  /* cardGrid *******************************************************************************/
+  
+  
+  
+  
+  
+  
+  /* card grid ************************************************************************/
   .page-shop-fios .cardsGrid__wrapper {
     width: 100%;
     height: 805px;
     border-bottom: solid;
     border-width: .3px;
     border-color: #c3c3c3;
-    background-color: #F6F6F6;
+
+
+    /* background-color: #F6F6F6; */
+    background: #3498db;
+    color: #fff;
   }
   
   .page-shop-fios .cardsGrid__wrapper .cardsGrid__subwrapper {
     /* max-width: 1280px; */
     margin: auto;
-    padding: 42px 0 0 170px;
+    padding: 42px 170px 0 170px;
   }
   
   
@@ -1730,10 +1740,11 @@
     width: 300px;
     height: 579px;
     box-shadow: 0px 0px 1px 0px #212121;
-    background-color: #FFFFFF;
+    /* background-color: #FFFFFF; */
     margin: 0 20px 0 0;
     position: relative;
     /* display: inline-block; */
+    border: solid;
   }
   
   .page-shop-fios .cards__wrapper .card__endpoint {

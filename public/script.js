@@ -184,7 +184,6 @@ $(document).ready(function(){
 
 
 
-
     // Var to hold page user is on when page is reloaded or switched
     var userURL;
     var whyFiosURL = 'why-fios';
@@ -372,7 +371,7 @@ $(document).ready(function(){
     } // documentPrep
 
     // fire documentPrep on page load
-    documentPrep();
+    // documentPrep();
 
 
 
@@ -409,7 +408,9 @@ $(document).ready(function(){
         for (i in obj) {
 
             // init card variable
-            var card = '<div class="card">'; // Open card -- permanent
+            var card = '';
+            // var card = '<div class="card">'; // Open card -- permanent
+            // var card = '<div class="card slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false" tabindex="0" role="tabpanel" id="slick-slide01" aria-describedby="slick-slide-control01" style="width: 370px;">';
 
             // wrapper for top section
             card += '<div class="pricing__section">';
@@ -490,13 +491,25 @@ $(document).ready(function(){
             card += '<div class="divider__right float-left"></div>';
             card += '</div>';
             card += '<div class="contact__orderonline" href="' + obj[i].orderOnlineLink + '">Order online</div>';
-            card += '</div>';
+            // card += '</div>';
 
             // // Close card -- permanent
             // card =+ '</div>';
 
 
-            $('.cards__endpoint' + i + '').append(card);
+            // $('.cards__endpoint' + i + '').append(card);
+
+
+            // $('.slick-list').append(card);
+            // $('.slick-track').append(card);
+
+            // $('.cards__endpoint__wrapper').slick('slickAdd', card);
+
+            console.log('fack!');
+            // $('.cards__endpoint' + i + '').slick('slickAdd', card);
+
+            $('.cards__endpoint__wrapper').slick('slickAdd','<div class="card"></div>');
+            $('.card').html(card);
             
 
         }; // Close loop
@@ -535,11 +548,39 @@ $(document).ready(function(){
 
 
 
+    function testInjector() {
+        var testCard = '<div class="card"></div>';
+        var testCard2 = '<div class="card slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false" tabindex="0" role="tabpanel" id="slick-slide01" aria-describedby="slick-slide-control01" style="width: 370px;"></div>';
+        $('.card').append(testCard2);
+        
+    };
+
+
+
+    
+
+
+
+
+
+
     // Click left cards button
     $('.cardsNav__left').on('click', function() {
 
-        documentClear();
+        // documentClear();
+
+        // $('.add-remove').slick('slickRemove',slideIndex - 1);
+        
+        // if (slideIndex !== 0){
+        //     slideIndex--;
+        // }
+        
+        // $('.cards__endpoint__wrapper').slick('slickRemove','<div class="card"></div>');
+        // $('.cards__endpoint__wrapper').html('<div class="slickAdd slickRemove card"></div>');
+
+
         cardInjector([cards_object.card_1, cards_object.card_2, cards_object.card_3]);
+        // testInjector();
 
     });
 
@@ -548,7 +589,7 @@ $(document).ready(function(){
     // Click center cards button
     $('.cardsNav__center').on('click', function() {
         
-        documentClear();
+        // documentClear();
         cardInjector([cards_object.card_4, cards_object.card_5, cards_object.card_6]);
 
     });
@@ -558,7 +599,7 @@ $(document).ready(function(){
     // Click right cards button
     $('.cardsNav__right').on('click', function() {
 
-        documentClear();
+        // documentClear();
         cardInjector([cards_object.card_1, cards_object.card_2, cards_object.card_3, cards_object.card_4, cards_object.card_5, cards_object.card_6]);
 
     });
@@ -573,11 +614,38 @@ $(document).ready(function(){
 
     // Init slick
     $('.cards__endpoint__wrapper').slick({
+        arrows: true,
+        dots: true,
         infinite: false,
         slidesToShow: 3,
         slidesToScroll: 1
     });
 
+    
+
+
+
+
+
+
+
+    // $('.cardsNav__center').on('click', function() {
+    //     $('.cards__endpoint__wrapper').slick('slickAdd','<div class="card"></div>');
+    // });
+    
+
+
+
+
+
+
+    // $('.js-remove-slide').on('click', function() {
+    //     $('.add-remove').slick('slickRemove',slideIndex - 1);
+    //     if (slideIndex !== 0){
+    //         slideIndex--;
+    //     }
+    // });
+          
 
 
 
