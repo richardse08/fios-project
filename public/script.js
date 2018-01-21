@@ -397,6 +397,8 @@ $(document).ready(function(){
     // Inject js and render on the DOM
     function cardInjector(obj) {
 
+        // Show card
+        $('.cards__endpoint__wrapper').removeClass('display-none');
 
         // Loop through obj
         for (i in obj) {
@@ -487,8 +489,10 @@ $(document).ready(function(){
             card += '<div class="contact__orderonline" href="' + obj[i].orderOnlineLink + '">Order online</div>';
             // card += '</div>';
 
+            
             // // Close card -- permanent
             // card =+ '</div>';
+
 
             // This is the old way of doing it which doesnt work with slick
             // $('.cards__endpoint' + i + '').append(card);
@@ -509,8 +513,10 @@ $(document).ready(function(){
 
             // This DOES work, if you change the cards htmls as we are doing below
             $('.cards__endpoint__wrapper').slick('slickAdd','<div class="card"></div>');
-            // Take all the stuff that needs to be in a card, EXCLUDING the opening <div class=card> and closing </div> tags
-            // since those will already be fulfilled by the card in html
+
+
+            // Take all the stuff that needs to be in a card, EXCLUDING the opening <div class=card>
+            // and closing </div> tags since those will already be fulfilled by the card in html
             $('.card').html(card);
             
 
@@ -521,23 +527,6 @@ $(document).ready(function(){
 
 
 
-
-
-
-
-
-
-    // testing only
-    function testInjector() {
-        var testCard = '<div class="card"></div>';
-        var testCard2 = '<div class="card slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false" tabindex="0" role="tabpanel" id="slick-slide01" aria-describedby="slick-slide-control01" style="width: 370px;"></div>';
-        $('.card').append(testCard2);
-        
-    };
-
-
-
-    
 
 
 
@@ -597,10 +586,21 @@ $(document).ready(function(){
         slidesToScroll: 1
     });
 
-    
 
 
 
+
+
+
+
+
+    // testing only
+    // function testInjector() {
+    //     var testCard = '<div class="card"></div>';
+    //     var testCard2 = '<div class="card slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false" tabindex="0" role="tabpanel" id="slick-slide01" aria-describedby="slick-slide-control01" style="width: 370px;"></div>';
+    //     $('.card').append(testCard2);
+        
+    // };
 
 
 
@@ -612,22 +612,13 @@ $(document).ready(function(){
 
 
 
-
-
-
     // $('.js-remove-slide').on('click', function() {
     //     $('.add-remove').slick('slickRemove',slideIndex - 1);
     //     if (slideIndex !== 0){
     //         slideIndex--;
     //     }
     // });
-          
-
-
-
-
-
-
+    
 
 
 
