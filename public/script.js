@@ -38,7 +38,7 @@ $(document).ready(function(){
     var cards_object = {
         // 1
         'card_1': {
-            'title': '100/100 Mbps Internet ONE',
+            'title': '100/100 Mbps Internet',
             'price': '39.99',
             'legals': 'for yr 1 + taxes, equip. charges & other fees.',
             'legalsSuperscript': '1',
@@ -61,7 +61,7 @@ $(document).ready(function(){
         },
         // 2
         'card_2': {
-            'title': 'Fios Gigabit Connection with Custom TV TWO',
+            'title': 'Fios Gigabit Connection with Custom TV',
             'price': '74.99',
             'legals': 'for yr 1 + taxes, equip. charges RSN & other fees.',
             'legalsSuperscript': '2',
@@ -84,7 +84,7 @@ $(document).ready(function(){
         },
         // 3
         'card_3': {
-            'title': 'Fios Gigabit Connection THREE',
+            'title': 'Fios Gigabit Connection',
             'price': '79.99',
             'legals': '+ taxes, equip. charges & other fees.',
             'legalsSuperscript': '3',
@@ -107,7 +107,7 @@ $(document).ready(function(){
         },
         // 4
         'card_4': {
-            'title': '100/100 Mbps Internet FOUR',
+            'title': '100/100 Mbps Internet',
             'price': '39.99',
             'legals': 'for yr 1 + taxes, equip. charges & other fees.',
             'legalsSuperscript': '1',
@@ -130,7 +130,7 @@ $(document).ready(function(){
         },
         // 5
         'card_5': {
-            'title': 'Fios Gigabit Connection FIVE',
+            'title': 'Fios Gigabit Connection',
             'price': '79.99',
             'legals': '+ taxes, equip. charges & other fees.',
             'legalsSuperscript': '2',
@@ -153,7 +153,7 @@ $(document).ready(function(){
         },
         // 6
         'card_6': {
-            'title': '100/100 Mbps Internet SIX',
+            'title': '100/100 Mbps Internet',
             'price': '39.99',
             'legals': 'for yr 1 + taxes, equip. charges & other fees.',
             'legalsSuperscript': '1',
@@ -297,58 +297,6 @@ $(document).ready(function(){
 
 
 
-   
-
-
-
-
-
-
-
-
-
-    // Setup the dom
-    function documentPrep() {
-        
-        // Build the document
-        var endpoint = '<div class="card__endpoint cards__endpoint0"></div>';
-        endpoint += '<div class="card__endpoint cards__endpoint1"></div>';
-        endpoint += '<div class="card__endpoint cards__endpoint2"></div>';
-        endpoint += '<div class="card__endpoint cards__endpoint3"></div>';
-        endpoint += '<div class="card__endpoint cards__endpoint4"></div>';
-        endpoint += '<div class="card__endpoint cards__endpoint5"></div>';
-        endpoint += '<div class="card__endpoint cards__endpoint6"></div>';
-        endpoint += '<div class="card__endpoint cards__endpoint7"></div>';
-        endpoint += '<div class="card__endpoint cards__endpoint8"></div>';
-        
-
-        // Send the document to html
-        $('.cards__endpoint__wrapper').append(endpoint);
-        
-
-    } // documentPrep
-
-    // fire documentPrep on page load
-    // documentPrep();
-
-
-
-
-
-
-
-
-
-    // clear out document
-    var documentClear = function() {
-
-        $('.cards__endpoint__wrapper').html('');
-        documentPrep();
-
-    } // documentClear
-
-
-
 
 
 
@@ -451,31 +399,6 @@ $(document).ready(function(){
 
             card += '</div>';
 
-            // // Close card -- permanent
-            // card =+ '</div>';
-
-            // This is the old way of doing it which doesnt work with slick
-            // $('.cards__endpoint' + i + '').append(card);
-
-
-            // These approaches dont work
-            // $('.slick-list').append(card);
-            // $('.slick-track').append(card);
-
-            
-            // This doesnt work
-            // $('.cards__endpoint__wrapper').slick('slickAdd', card);
-
-
-            // This doesnt seem to work either
-            // $('.cards__endpoint' + i + '').slick('slickAdd', card);
-
-
-            // This DOES work, if you change the cards htmls as we are doing below
-            // $('.cards__endpoint__wrapper').slick('slickAdd','<div class="card"></div>');
-            // Take all the stuff that needs to be in a card, EXCLUDING the opening <div class=card> and closing </div> tags
-            // since those will already be fulfilled by the card in html
-            // $('.card').html(card);
 
             $('.cards__endpoint__wrapper_' + section).append(card);
             
@@ -493,22 +416,16 @@ $(document).ready(function(){
 
 
 
-    // testing only
-    function testInjector() {
-        var testCard = '<div class="card"></div>';
-        var testCard2 = '<div class="card slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false" tabindex="0" role="tabpanel" id="slick-slide01" aria-describedby="slick-slide-control01" style="width: 370px;"></div>';
-        $('.card').append(testCard2);
-        
-    };
-
-
-
+    // Send the cards to each of the 3 sets of cards to cards sections on page load
+    // ie, cards__endpoint__wrapper_most-popular, etc
+    // control display of cards sections using display-none
     cardInjector([cards_object.card_1, cards_object.card_2, cards_object.card_3], 'most-popular');
 
     cardInjector([cards_object.card_4, cards_object.card_5, cards_object.card_6], 'internet');
 
     cardInjector([cards_object.card_1, cards_object.card_2, cards_object.card_3, cards_object.card_4, cards_object.card_5, cards_object.card_6], 'bundles');
     
+
 
 
     $('.cardSelection').click(function() {
@@ -538,6 +455,7 @@ $(document).ready(function(){
             slidesToShow: 3,
             slidesToScroll: 1
         });
+        
     });
 
   
@@ -559,31 +477,6 @@ $(document).ready(function(){
         slidesToScroll: 1
     });
 
-    
-
-
-
-
-
-
-
-    // $('.cardsNav__center').on('click', function() {
-    //     $('.cards__endpoint__wrapper').slick('slickAdd','<div class="card"></div>');
-    // });
-    
-
-
-
-
-
-
-    // $('.js-remove-slide').on('click', function() {
-    //     $('.add-remove').slick('slickRemove',slideIndex - 1);
-    //     if (slideIndex !== 0){
-    //         slideIndex--;
-    //     }
-    // });
-          
 
 
 

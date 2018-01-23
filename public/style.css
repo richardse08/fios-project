@@ -1707,20 +1707,21 @@
   
   /* card grid ************************************************************************/
   .page-shop-fios .cardsGrid__wrapper {
-    width: 100%;
+    /* width: 100%; */
+    /* width: 940px; */
     height: 805px;
     border-bottom: solid;
     border-width: .3px;
     border-color: #c3c3c3;
 
 
-    /* background-color: #F6F6F6; */
-    background: #3498db;
-    color: #fff;
+    background-color: #F6F6F6;
+    /* background: #3498db; */
+    /* color: #fff; */
   }
   
   .page-shop-fios .cardsGrid__wrapper .cardsGrid__subwrapper {
-    /* max-width: 1280px; */
+    max-width: 1280px;
     margin: auto;
     padding: 42px 170px 0 170px;
   }
@@ -1730,21 +1731,50 @@
   /* card ************************************************************************************/
   .page-shop-fios .cards__wrapper {
     /* position: relative; */
+    /* position: absolute; */
+    width: 940px;
+    height: 568px;
+    margin: auto;
   }
   
   .page-shop-fios .cards__wrapper .cards__endpoint {
     /* text-align: center; */
+    /* position: relative; */
   }
   
   .page-shop-fios .cards__wrapper .card {
-    width: 300px;
-    height: 579px;
+    /* width: 300px; */
+    /* height: 579px; */
     box-shadow: 0px 0px 1px 0px #212121;
-    /* background-color: #FFFFFF; */
+    background-color: #FFFFFF;
     margin: 0 20px 0 0;
-    position: relative;
+    /* position: relative; */
+    /* position: absolute; */
     /* display: inline-block; */
     border: solid;
+  }
+
+  
+
+  /* do not add width here as it will make the cards drop down */
+  .slick-track {
+    /* width: 1005px !important; */
+    /* padding: 1px 1px 1px 1px; */
+    /* margin-right: 5px; */
+    /* margin: auto !important; */
+  }
+
+  .slick-list {
+    width: 1000px !important;
+    /* margin: auto !important; */
+  }
+
+  .one_card {
+    height: 568px !important;
+    width: 300px !important;
+    margin-right: 20px !important;
+    box-shadow: 0px 0px 1px 0px #212121;
+    background-color: #FFFFFF;
   }
   
   .page-shop-fios .cards__wrapper .card__endpoint {
@@ -1787,7 +1817,7 @@
     border-bottom: solid;
     border-color: #D8DADA;
     border-width: 0.5px;
-    box-shadow: 0px 0px 1px 0px #212121;
+    /* box-shadow: 0px 0px 1px 0px #212121; */
     margin: 54px 0 0 0;
   }
   
