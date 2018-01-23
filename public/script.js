@@ -453,7 +453,11 @@ $(document).ready(function(){
             dots: true,
             infinite: false,
             slidesToShow: 3,
-            slidesToScroll: 1
+            slidesToScroll: 1,
+            // centerPadding: '20px',
+            variableWidth: true,
+            prevArrow: $('.prev'),
+            nextArrow: $('.next')
         });
         
     });
@@ -474,7 +478,11 @@ $(document).ready(function(){
         dots: true,
         infinite: false,
         slidesToShow: 3,
-        slidesToScroll: 1
+        slidesToScroll: 1,
+        // centerPadding: '20px',
+        variableWidth: true,
+        prevArrow: $('.prev'),
+        nextArrow: $('.next')
     });
 
 

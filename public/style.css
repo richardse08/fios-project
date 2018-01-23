@@ -1707,7 +1707,6 @@
   
   /* card grid ************************************************************************/
   .page-shop-fios .cardsGrid__wrapper {
-    /* width: 100%; */
     /* width: 940px; */
     height: 805px;
     border-bottom: solid;
@@ -1715,24 +1714,22 @@
     border-color: #c3c3c3;
 
 
-    background-color: #F6F6F6;
+    /* background-color: #F6F6F6; */
     /* background: #3498db; */
-    /* color: #fff; */
   }
   
   .page-shop-fios .cardsGrid__wrapper .cardsGrid__subwrapper {
-    max-width: 1280px;
-    margin: auto;
-    padding: 42px 170px 0 170px;
+    /* max-width: 1280px; */
+    /* margin: auto; */
+    /* padding: 42px 160px 0 170px; */
+    /* margin: auto; */
   }
   
   
   
   /* card ************************************************************************************/
   .page-shop-fios .cards__wrapper {
-    /* position: relative; */
-    /* position: absolute; */
-    width: 940px;
+    width: 950px;
     height: 568px;
     margin: auto;
   }
@@ -1741,13 +1738,17 @@
     /* text-align: center; */
     /* position: relative; */
   }
+
+  .page-shop-fios .cards__wrapper .cards__endpoint {
+    /* height: 1000px !important; */
+  }
   
   .page-shop-fios .cards__wrapper .card {
     /* width: 300px; */
     /* height: 579px; */
     box-shadow: 0px 0px 1px 0px #212121;
     background-color: #FFFFFF;
-    margin: 0 20px 0 0;
+    /* margin: 0 20px 0 0; */
     /* position: relative; */
     /* position: absolute; */
     /* display: inline-block; */
@@ -1758,20 +1759,39 @@
 
   /* do not add width here as it will make the cards drop down */
   .slick-track {
-    /* width: 1005px !important; */
-    /* padding: 1px 1px 1px 1px; */
-    /* margin-right: 5px; */
-    /* margin: auto !important; */
   }
 
   .slick-list {
-    width: 1000px !important;
+    /* width: 1000px; */
+    /* width: 950px !important; */
+    /* height: 568px !important; */
     /* margin: auto !important; */
+    padding: 10px 50px 10px 0px !important;
+  }
+
+  .slick-slide {
+    width: 300px !important;
+    height: 568px !important;
+  }
+
+  .prev {
+    display: block;
+    height: 48px;
+    width: 48px;
+    background: url('assets/assets-shop-fios/prev.png') no-repeat;;
+  }
+
+  .next {
+    display: block;
+    height: 48px;
+    width: 48px;
+    background: url('assets/assets-shop-fios/next.png') no-repeat;;
   }
 
   .one_card {
-    height: 568px !important;
-    width: 300px !important;
+    /* height: 568px !important;
+    width: 300px !important; */
+    
     margin-right: 20px !important;
     box-shadow: 0px 0px 1px 0px #212121;
     background-color: #FFFFFF;
