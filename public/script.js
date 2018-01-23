@@ -38,7 +38,7 @@ $(document).ready(function(){
     var cards_object = {
         // 1
         'card_1': {
-            'title': '100/100 Mbps Internet ONE',
+            'title': '100/100 Mbps Internet',
             'price': '39.99',
             'legals': 'for yr 1 + taxes, equip. charges & other fees.',
             'legalsSuperscript': '1',
@@ -61,7 +61,7 @@ $(document).ready(function(){
         },
         // 2
         'card_2': {
-            'title': 'Fios Gigabit Connection with Custom TV TWO',
+            'title': 'Fios Gigabit Connection with Custom TV',
             'price': '74.99',
             'legals': 'for yr 1 + taxes, equip. charges RSN & other fees.',
             'legalsSuperscript': '2',
@@ -84,7 +84,7 @@ $(document).ready(function(){
         },
         // 3
         'card_3': {
-            'title': 'Fios Gigabit Connection THREE',
+            'title': 'Fios Gigabit Connection',
             'price': '79.99',
             'legals': '+ taxes, equip. charges & other fees.',
             'legalsSuperscript': '3',
@@ -107,7 +107,7 @@ $(document).ready(function(){
         },
         // 4
         'card_4': {
-            'title': '100/100 Mbps Internet FOUR',
+            'title': '100/100 Mbps Internet',
             'price': '39.99',
             'legals': 'for yr 1 + taxes, equip. charges & other fees.',
             'legalsSuperscript': '1',
@@ -130,7 +130,7 @@ $(document).ready(function(){
         },
         // 5
         'card_5': {
-            'title': 'Fios Gigabit Connection FIVE',
+            'title': 'Fios Gigabit Connection',
             'price': '79.99',
             'legals': '+ taxes, equip. charges & other fees.',
             'legalsSuperscript': '2',
@@ -153,7 +153,7 @@ $(document).ready(function(){
         },
         // 6
         'card_6': {
-            'title': '100/100 Mbps Internet SIX',
+            'title': '100/100 Mbps Internet',
             'price': '39.99',
             'legals': 'for yr 1 + taxes, equip. charges & other fees.',
             'legalsSuperscript': '1',
@@ -297,97 +297,6 @@ $(document).ready(function(){
 
 
 
-    // Turn cards in the cardsNav section on and off
-    $('.cardSelection').on('click', function() {
-
-        // If card is inactive, make it active
-        if ($(this).hasClass('cardsNav__inactive')) {
-            
-            if ($(this).hasClass('cardsNav__left')) {
-                most_popular = true;
-            }
-            if ($(this).hasClass('cardsNav__center')) {
-                internet_only = true;
-            }
-            if ($(this).hasClass('cardsNav__right')) {
-                bundles = true;
-            }
-
-            $(this).removeClass('cardsNav__inactive');
-            $(this).addClass('cardsNav__active');
-
-        }
-
-        // If cards is active, make it inactive
-        else if ($(this).hasClass('cardsNav__active')) {
-
-            if ($(this).hasClass('cardsNav__left')) {
-                most_popular = false;
-            }
-            if ($(this).hasClass('cardsNav__center')) {
-                internet_only = false;
-            }
-            if ($(this).hasClass('cardsNav__right')) {
-                bundles = false;
-            }
-
-            $(this).removeClass('cardsNav__active');
-            $(this).addClass('cardsNav__inactive');
-
-        }
-
-    });
-
-
-
-
-
-
-
-
-
-    // Setup the dom
-    function documentPrep() {
-        
-        // Build the document
-        var endpoint = '<div class="card__endpoint cards__endpoint0"></div>';
-        endpoint += '<div class="card__endpoint cards__endpoint1"></div>';
-        endpoint += '<div class="card__endpoint cards__endpoint2"></div>';
-        endpoint += '<div class="card__endpoint cards__endpoint3"></div>';
-        endpoint += '<div class="card__endpoint cards__endpoint4"></div>';
-        endpoint += '<div class="card__endpoint cards__endpoint5"></div>';
-        endpoint += '<div class="card__endpoint cards__endpoint6"></div>';
-        endpoint += '<div class="card__endpoint cards__endpoint7"></div>';
-        endpoint += '<div class="card__endpoint cards__endpoint8"></div>';
-        
-
-        // Send the document to html
-        $('.cards__endpoint__wrapper').append(endpoint);
-        
-
-    } // documentPrep
-
-    // fire documentPrep on page load
-    // documentPrep();
-
-
-
-
-
-
-
-
-
-    // clear out document
-    var documentClear = function() {
-
-        $('.cards__endpoint__wrapper').html('');
-        documentPrep();
-
-    } // documentClear
-
-
-
 
 
 
@@ -395,14 +304,14 @@ $(document).ready(function(){
 
 
     // Inject js and render on the DOM
-    function cardInjector(obj) {
+    function cardInjector(obj, section) {
 
 
         // Loop through obj
         for (i in obj) {
 
             // init card variable
-            var card = '';
+            var card = '<div class="one_card">';
             // var card = '<div class="card">'; // Open card -- permanent
             // var card = '<div class="card slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false" tabindex="0" role="tabpanel" id="slick-slide01" aria-describedby="slick-slide-control01" style="width: 370px;">';
 
@@ -487,31 +396,11 @@ $(document).ready(function(){
             card += '<div class="contact__orderonline" href="' + obj[i].orderOnlineLink + '">Order online</div>';
             // card += '</div>';
 
-            // // Close card -- permanent
-            // card =+ '</div>';
 
-            // This is the old way of doing it which doesnt work with slick
-            // $('.cards__endpoint' + i + '').append(card);
+            card += '</div>';
 
 
-            // These approaches dont work
-            // $('.slick-list').append(card);
-            // $('.slick-track').append(card);
-
-            
-            // This doesnt work
-            // $('.cards__endpoint__wrapper').slick('slickAdd', card);
-
-
-            // This doesnt seem to work either
-            // $('.cards__endpoint' + i + '').slick('slickAdd', card);
-
-
-            // This DOES work, if you change the cards htmls as we are doing below
-            $('.cards__endpoint__wrapper').slick('slickAdd','<div class="card"></div>');
-            // Take all the stuff that needs to be in a card, EXCLUDING the opening <div class=card> and closing </div> tags
-            // since those will already be fulfilled by the card in html
-            $('.card').html(card);
+            $('.cards__endpoint__wrapper_' + section).append(card);
             
 
         }; // Close loop
@@ -527,59 +416,54 @@ $(document).ready(function(){
 
 
 
-    // testing only
-    function testInjector() {
-        var testCard = '<div class="card"></div>';
-        var testCard2 = '<div class="card slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false" tabindex="0" role="tabpanel" id="slick-slide01" aria-describedby="slick-slide-control01" style="width: 370px;"></div>';
-        $('.card').append(testCard2);
-        
-    };
+    // Send the cards to each of the 3 sets of cards to cards sections on page load
+    // ie, cards__endpoint__wrapper_most-popular, etc
+    // control display of cards sections using display-none
+    cardInjector([cards_object.card_1, cards_object.card_2, cards_object.card_3], 'most-popular');
 
+    cardInjector([cards_object.card_4, cards_object.card_5, cards_object.card_6], 'internet');
 
-
+    cardInjector([cards_object.card_1, cards_object.card_2, cards_object.card_3, cards_object.card_4, cards_object.card_5, cards_object.card_6], 'bundles');
     
 
 
 
+    $('.cardSelection').click(function() {
 
+        var section = $(this).data('section');
 
+        // Remove all active class (for underlining)
+        $('.cardSelection').removeClass('cardsNav__active');
 
-    // Click left cards button
-    $('.cardsNav__left').on('click', function() {
+        // Add active class for just this tab
+        $(this).addClass('cardsNav__active');
 
+        // Hide all sections first
+        $('.cards__endpoint__wrapper').addClass('display-none');
 
-        // This doesnt work because we need a slideIndex, which we are presently NOT using
-        // slideIndex appears to be utilized in the slick.js file though...?
-        // $('.add-remove').slick('slickRemove',slideIndex - 1);
-        // if (slideIndex !== 0){
-        //     slideIndex--;
-        // }
-        // $('.cards__endpoint__wrapper').slick('slickRemove','<div class="card"></div>');
-        // $('.cards__endpoint__wrapper').html('<div class="slickAdd slickRemove card"></div>');
+        // Show just the section that we want
+        $('.cards__endpoint__wrapper_' + section).removeClass('display-none');
 
+        // Unitialize this slider
+        $('.cards__endpoint__wrapper_' + section).slick('unslick');
 
-        cardInjector([cards_object.card_1, cards_object.card_2, cards_object.card_3]);
-
-    });
-
-
-
-    // Click center cards button
-    $('.cardsNav__center').on('click', function() {
+        // Reinitialize this slider
+        $('.cards__endpoint__wrapper_' + section).slick({
+            arrows: true,
+            dots: true,
+            infinite: false,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            // centerPadding: '20px',
+            variableWidth: true,
+            prevArrow: $('.prev'),
+            nextArrow: $('.next')
+        });
         
-        cardInjector([cards_object.card_4, cards_object.card_5, cards_object.card_6]);
-
     });
 
-
-
-    // Click right cards button
-    $('.cardsNav__right').on('click', function() {
-
-        cardInjector([cards_object.card_1, cards_object.card_2, cards_object.card_3, cards_object.card_4, cards_object.card_5, cards_object.card_6]);
-
-    });
-
+  
+     
 
 
 
@@ -594,34 +478,13 @@ $(document).ready(function(){
         dots: true,
         infinite: false,
         slidesToShow: 3,
-        slidesToScroll: 1
+        slidesToScroll: 1,
+        // centerPadding: '20px',
+        variableWidth: true,
+        prevArrow: $('.prev'),
+        nextArrow: $('.next')
     });
 
-    
-
-
-
-
-
-
-
-    // $('.cardsNav__center').on('click', function() {
-    //     $('.cards__endpoint__wrapper').slick('slickAdd','<div class="card"></div>');
-    // });
-    
-
-
-
-
-
-
-    // $('.js-remove-slide').on('click', function() {
-    //     $('.add-remove').slick('slickRemove',slideIndex - 1);
-    //     if (slideIndex !== 0){
-    //         slideIndex--;
-    //     }
-    // });
-          
 
 
 
