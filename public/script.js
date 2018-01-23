@@ -310,95 +310,97 @@ $(document).ready(function(){
         // Loop through obj
         for (i in obj) {
 
-            // init card variable
-            var card = '<div class="one_card">';
-            // var card = '<div class="card">'; // Open card -- permanent
-            // var card = '<div class="card slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false" tabindex="0" role="tabpanel" id="slick-slide01" aria-describedby="slick-slide-control01" style="width: 370px;">';
+            // // init card variable
+            // var card = '<div class="one_card">';
+            // // var card = '<div class="card">'; // Open card -- permanent
+            // // var card = '<div class="card slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false" tabindex="0" role="tabpanel" id="slick-slide01" aria-describedby="slick-slide-control01" style="width: 370px;">';
 
-            // wrapper for top section
-            card += '<div class="pricing__section">';
-            card += '<img src="/assets/assets-shop-fios/featured.png">'; // Featured icon -- optional
-            card += '<div class="title">' + obj[i].title + '</div>'; // Title -- will change
-            card += '<div class="price">$' + obj[i].price + '/mo</div>';
-            card += '<div class="legals">' + obj[i].legals + '<sup>' + obj[i].legalsSuperscript + '</sup></div>';
-            card += '</div>' // Close pricing__section
-
-
-            // // Features -- permanent
-            card += '<div class="features">';
-
-            // // Speed gauge section
-            card += '<div class="speedGauge">'; // speedGauge -- permanent
-            card += '<div class="speedBar ' + obj[i].speedType + '"></div>';
-            card += '</div>'; // Close speedGauge -- permanent
-
-            // // Connection section
-            card += '<div class="connection">'; // Connection -- this will change
-            card += '<div class="connectionInfo float-left">' + obj[i].connectionInfo + '</div>'; // This will change
-            card += '<div class="connectionInfoSub float-left">' + obj[i].connectionInfoSub + '</div>'; // This is OPTIONAL
-            card += '</div>'; // Close connection -- permanent and will change
-
-            // // Suggested device quantity
-            card += '<div class="suggestedDeviceQuantity clear">' + obj[i].suggestedDeviceQuantity + '</div>';
-
-            // Check if card has a secondary speed bar element
-            if (obj[i].speedTypeSecondary != '') {
-                // second speed bar
-                card += '<div class="speedGaugeSecondary">'; // speedGauge -- permanent
-                card += '<div class="speedBar ' + obj[i].speedTypeSecondary + '"></div>';
-                card += '</div>'; // Close speedGauge -- permanent
-
-                // // Connection section
-                card += '<div class="connection">'; // Connection -- this will change
-                card += '<div class="connectionInfo float-left">' + obj[i].connectionInfoSecondary + '</div>'; // This will change
-                card += '<div class="connectionInfoSub float-left">' + obj[i].connectionInfoSubSecondary + '</div>'; // This is OPTIONAL
-                card += '</div>'; // Close connection -- permanent and will change
-
-                // // Suggested device quantity
-                card += '<div>'
-                card += '<div class="suggestedDeviceQuantity float-left">' + obj[i].suggestedDeviceQuantitySecondary + '</div>';
-                card += '<div class="learnMore float-right" href="' + obj[i].learnMoreLink + '">' + obj[i].learnMore + '</div>';
-                card += '<div class="clear"></div>'
-                card += '</div>'
-            }
-
-            // // Close features -- permanent
-            card += '</div>';
+            // // wrapper for top section
+            // card += '<div class="pricing__section">';
+            // card += '<img src="/assets/assets-shop-fios/featured.png">'; // Featured icon -- optional
+            // card += '<div class="title">' + obj[i].title + '</div>'; // Title -- will change
+            // card += '<div class="price">$' + obj[i].price + '/mo</div>';
+            // card += '<div class="legals">' + obj[i].legals + '<sup>' + obj[i].legalsSuperscript + '</sup></div>';
+            // card += '</div>' // Close pricing__section
 
 
+            // // // Features -- permanent
+            // card += '<div class="features">';
 
-            // // bulletPoint section
-            card += '<div class="bulletPoint">';
+            // // // Speed gauge section
+            // card += '<div class="speedGauge">'; // speedGauge -- permanent
+            // card += '<div class="speedBar ' + obj[i].speedType + '"></div>';
+            // card += '</div>'; // Close speedGauge -- permanent
 
-            // // bullet -- will have between 1-2 of these
-            // // NEED TO ADD IMAGE OPTIONS HERE
-            card += '<img class="bulletPoint__bullet--one float-left" src="/assets/assets-shop-fios/bullet.png">';
-            card += '<div class="bulletPoint__text--one">' + obj[i].bullet__one + '</div>';
-            card += '</div>';
+            // // // Connection section
+            // card += '<div class="connection">'; // Connection -- this will change
+            // card += '<div class="connectionInfo float-left">' + obj[i].connectionInfo + '</div>'; // This will change
+            // card += '<div class="connectionInfoSub float-left">' + obj[i].connectionInfoSub + '</div>'; // This is OPTIONAL
+            // card += '</div>'; // Close connection -- permanent and will change
 
-            if (obj[i].bullet__two != '') {
-                card += '<div class="bulletPoint">';
-                card += '<img class="bulletPoint__bullet--two float-left" src="/assets/assets-shop-fios/bullet.png">';
-                card += '<div class="bulletPoint__text--two">' + obj[i].bullet__two + '</div>';
-                // // Close bulletPoint section -- permanent
-                card += '</div>';
-            }
+            // // // Suggested device quantity
+            // card += '<div class="suggestedDeviceQuantity clear">' + obj[i].suggestedDeviceQuantity + '</div>';
 
+            // // Check if card has a secondary speed bar element
+            // if (obj[i].speedTypeSecondary != '') {
+            //     // second speed bar
+            //     card += '<div class="speedGaugeSecondary">'; // speedGauge -- permanent
+            //     card += '<div class="speedBar ' + obj[i].speedTypeSecondary + '"></div>';
+            //     card += '</div>'; // Close speedGauge -- permanent
 
-            // // Contact section -- permanent, only change is the number
-            card += '<div class="contact">';
-            card += '<div class="contact__number">Call to order: ' + obj[i].contact__number + '</div>';
-            card += '<div class="contact__alternative">';
-            card += '<div class="divider__left float-left"></div>';
-            card += '<div class="divider__message float-left">or</div>';
-            card += '<div class="divider__right float-left"></div>';
-            card += '</div>';
-            card += '<div class="contact__orderonline" href="' + obj[i].orderOnlineLink + '">Order online</div>';
+            //     // // Connection section
+            //     card += '<div class="connection">'; // Connection -- this will change
+            //     card += '<div class="connectionInfo float-left">' + obj[i].connectionInfoSecondary + '</div>'; // This will change
+            //     card += '<div class="connectionInfoSub float-left">' + obj[i].connectionInfoSubSecondary + '</div>'; // This is OPTIONAL
+            //     card += '</div>'; // Close connection -- permanent and will change
+
+            //     // // Suggested device quantity
+            //     card += '<div>'
+            //     card += '<div class="suggestedDeviceQuantity float-left">' + obj[i].suggestedDeviceQuantitySecondary + '</div>';
+            //     card += '<div class="learnMore float-right" href="' + obj[i].learnMoreLink + '">' + obj[i].learnMore + '</div>';
+            //     card += '<div class="clear"></div>'
+            //     card += '</div>'
+            // }
+
+            // // // Close features -- permanent
             // card += '</div>';
 
 
-            card += '</div>';
 
+            // // // bulletPoint section
+            // card += '<div class="bulletPoint">';
+
+            // // // bullet -- will have between 1-2 of these
+            // // // NEED TO ADD IMAGE OPTIONS HERE
+            // card += '<img class="bulletPoint__bullet--one float-left" src="/assets/assets-shop-fios/bullet.png">';
+            // card += '<div class="bulletPoint__text--one">' + obj[i].bullet__one + '</div>';
+            // card += '</div>';
+
+            // if (obj[i].bullet__two != '') {
+            //     card += '<div class="bulletPoint">';
+            //     card += '<img class="bulletPoint__bullet--two float-left" src="/assets/assets-shop-fios/bullet.png">';
+            //     card += '<div class="bulletPoint__text--two">' + obj[i].bullet__two + '</div>';
+            //     // // Close bulletPoint section -- permanent
+            //     card += '</div>';
+            // }
+
+
+            // // // Contact section -- permanent, only change is the number
+            // card += '<div class="contact">';
+            // card += '<div class="contact__number">Call to order: ' + obj[i].contact__number + '</div>';
+            // card += '<div class="contact__alternative">';
+            // card += '<div class="divider__left float-left"></div>';
+            // card += '<div class="divider__message float-left">or</div>';
+            // card += '<div class="divider__right float-left"></div>';
+            // card += '</div>';
+            // card += '<div class="contact__orderonline" href="' + obj[i].orderOnlineLink + '">Order online</div>';
+            // // card += '</div>';
+
+
+            // card += '</div>';
+
+
+            var card = '<a><img src="http://via.placeholder.com/300x766"></a>';
 
             $('.cards__endpoint__wrapper_' + section).append(card);
             
@@ -472,18 +474,18 @@ $(document).ready(function(){
 
 
 
-    // Init slick
-    $('.cards__endpoint__wrapper').slick({
-        arrows: true,
-        dots: true,
-        infinite: false,
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        // centerPadding: '20px',
-        variableWidth: true,
-        prevArrow: $('.prev'),
-        nextArrow: $('.next')
-    });
+    // // Init slick
+    // $('.cards__endpoint__wrapper').slick({
+    //     arrows: true,
+    //     dots: true,
+    //     infinite: false,
+    //     slidesToShow: 3,
+    //     slidesToScroll: 1,
+    //     // centerPadding: '20px',
+    //     variableWidth: true,
+    //     prevArrow: $('.prev'),
+    //     nextArrow: $('.next')
+    // });
 
 
 
