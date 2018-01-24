@@ -428,7 +428,7 @@ $(document).ready(function(){
 
 
 
-    $('.cardSelection').click(function() {
+    $('.cardSelection').click(function cardController() {
 
         var section = $(this).data('section');
 
@@ -456,14 +456,9 @@ $(document).ready(function(){
             slidesToScroll: 1,
             prevArrow: $('.prev'),
             nextArrow: $('.next')
-    
-            // variableWidth: true
-            // centerPadding: '20px'
-            // slideWidth: '400px'
         });
         
     });
-
   
      
 
@@ -473,20 +468,15 @@ $(document).ready(function(){
 
 
 
-
     // Init slick
     $('.cards__endpoint__wrapper').slick({
-        arrows: true,
+        arrows: false,
         dots: true,
         infinite: false,
         slidesToShow: 3,
         slidesToScroll: 1,
         prevArrow: $('.prev'),
         nextArrow: $('.next')
-
-        // variableWidth: true
-        // centerPadding: '20px'
-        // slideWidth: '400px'
     });
 
 
