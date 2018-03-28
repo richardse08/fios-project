@@ -1,6 +1,6 @@
 var express = require("express"); // Require express
 var app = express();
-var port = process.env.PORT || 3000; // Set the port
+var port = process.env.PORT || 5000; // Set the port
 
 
 app.use("/", express.static(__dirname + "/public")); // This will serve the public docs

@@ -53,9 +53,12 @@
   src: url(/assets/fonts/NHaasGroteskDSStd-75Bd.otf);
 }
 
-html, body {
+html {
   margin: 0px;
-  padding: 0px;
+}
+
+body {
+  margin: 0px;
 }
 
 .float-left {
@@ -324,7 +327,8 @@ font-size: 16px;
 /* divider below nav *********************************************/
 .main-divider {
   width: 100%;
-  border: solid;
+  border-top: solid;
+  border-bottom: solid;
   border-width: .5px;
   border-color: #c3c3c3;
 }
